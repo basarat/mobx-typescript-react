@@ -4,7 +4,6 @@
 
 Lets kickoff with a simple react-typescript application. 
 * We have a `Hello` component that maintains a local `clickedCount` state. 
-* As we click the button the click count is incremented and the ui updates accordingly. 
 
 ```js
 import * as React from 'react';
@@ -38,9 +37,43 @@ ReactDOM.render(
 
 ```
 ***Demo react click the button a few times***
+* As we click the button the click count is incremented and the ui updates accordingly. 
+
+***Open up shell***
 Using mobx in a typescript react application is super easy. All we need to do is install `mobx` along with `mobx-react`.
 
 ```sh
 npm install mobx mobx-react
 ```
 Since mobx is written in TypeScript there is no additional setup or type definitions required.
+
+***Jump back to code***
+* `mobx` provides decorators `observable` to mark a property as observable and `action` to carry out mutations in a transactional manner. 
+* `mobx-react` provides a decorater `observer` that can warp a react component to make it reactive to observable changes.
+
+```js
+import { observable, action } from 'mobx';
+import { observer } from 'mobx-react';
+```
+These three simple decorators are pretty much all you need to build highly scalable and easy to understand applications.
+
+* We can isolate the state managment into a simple `HelloData` class. 
+* It contains a simple `clickedCount` observable property.
+* And an `increment` action that increments this clicked count property.
+
+```js
+class HelloData {
+  @observable clickedCount = 0;
+
+  @action
+  increment() {
+    this.clickedCount++;
+  }
+}
+```
+
+To use this data class in react we simply make the component `@observer`
+* 
+
+
+* Moving this data managment out of the React component means is completely indepenent of react, can even be used in a server enviroment without any changes and effectively turns react into a simple and effective `data -to-> dom` transform.
