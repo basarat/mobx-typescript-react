@@ -4,7 +4,7 @@
 
 Lets kickoff with a simple react-typescript application. 
 * We have a `Hello` component that maintains a local `clickedCount` state. 
-* We ini
+* As we click the button the click count is incremented and the ui updates accordingly. 
 
 ```js
 import * as React from 'react';
@@ -37,4 +37,5 @@ ReactDOM.render(
 );
 
 ```
+***Demo react click the button a few times***
 
