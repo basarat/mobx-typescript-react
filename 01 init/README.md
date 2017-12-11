@@ -38,4 +38,9 @@ ReactDOM.render(
 
 ```
 ***Demo react click the button a few times***
+Using mobx in a typescript react application is super easy. All we need to do is install `mobx` along with `mobx-react`.
 
+```sh
+npm install mobx mobx-react
+```
+Since mobx is written in TypeScript there is no additional setup or type definitions required.
