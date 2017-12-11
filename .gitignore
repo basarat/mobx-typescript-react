@@ -1,6 +1,7 @@
 # IDE
 .alm/
 **/node_modules/**
+package-lock.json
 
 # Compiled output folders 
 lib

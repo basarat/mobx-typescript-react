@@ -2,6 +2,10 @@
 
 Docs / Code to an accompanying video course on mobx-typescript-react.
 
+## Setup 
+
+* `cd` into lesson folder.
+* `npm install`.
 
 ## Lessons
 
