@@ -73,7 +73,26 @@ class HelloData {
 ```
 
 To use this data class in react we simply make the component `@observer`
-* 
+* We no longer need to use generics for state. 
+* We simply initialize the data whenever the component is initiated. 
+* And then use this data to increment the count, as well as show the current count. 
 
+```js
+@observer
+class Hello extends React.Component<{}> {
+  data = new HelloData();
+  render() {
+    return (
+      <button onClick={() => this.data.increment()}>
+        Click count = {this.data.clickedCount}
+      </button>
+    );
+  }
+}
+```
 
-* Moving this data managment out of the React component means is completely indepenent of react, can even be used in a server enviroment without any changes and effectively turns react into a simple and effective `data -to-> dom` transform.
+***Select the data class***
+* Moving this data managment out of the React component means is completely indepenent of react and it can even be used in a server enviroment without any changes.
+
+***Select the component***
+* Using `mobx` effectively turns react into a simple and effective `data -to-> dom` transform. And all data management becomes simple JavaScript that can be tested and reasoned about in isolation.
