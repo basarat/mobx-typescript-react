@@ -92,7 +92,7 @@ class Hello extends React.Component<{}> {
 ```
 
 ***Select the data class***
-* Moving this data managment out of the React component means is completely indepenent of react and it can even be used in a server enviroment without any changes.
+* Moving this data managment out of the React component means is completely independent of react and it can even be used in a server enviroment without any changes.
 
 ***Select the component***
 * Using `mobx` effectively turns react into a simple and effective `data -to-> dom` transform. And all data management becomes simple JavaScript that can be tested and reasoned about in isolation.
