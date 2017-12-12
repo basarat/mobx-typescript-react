@@ -9,4 +9,4 @@ Docs / Code to an accompanying video course on mobx-typescript-react.
 
 ## Lessons
 
-* [Bootstrap]()
+* [Using mobx to isolate react component state](https://egghead.io/lessons/react-using-mobx-to-isolate-a-react-component-state)
