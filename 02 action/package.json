@@ -1,0 +1,25 @@
+{
+  "name": "bootstrap",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/basarat/typescript-react.git"
+  },
+  "scripts": {
+    "build": "webpack ./webpack.config.js",
+    "start": "webpack-dev-server ./webpack.config.js --content-base ./public"
+  },
+  "dependencies": {
+    "@types/react": "16.0.18",
+    "@types/react-dom": "16.0.2",
+    "mobx": "3.4.1",
+    "mobx-react": "4.3.5",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "ts-loader": "3.0.5",
+    "typescript": "2.5.3",
+    "webpack": "3.8.1",
+    "webpack-dev-server": "2.9.3"
+  }
+}
