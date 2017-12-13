@@ -38,5 +38,9 @@ ReactDOM.render(
 
 ```
 ***Demo react click the button a few times***
-* As we click the button the click count is incremented and the ui updates accordingly.
+* As we click the button, the click count is incremented and the ui updates accordingly.
 
+Mobx provides excellent dev-tools that allow you to observe changes that happen in actions. We can install them simply with npm install.
+```
+npm install mobx-react-devtools
+```
