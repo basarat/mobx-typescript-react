@@ -1,4 +1,4 @@
-# MobX Transactions and @action
+# MobX dev tools and @action
 > MobX gives you amazing `PureComponent` performance nearly for free. In this lesson we take a deeper look at `@actions` how they allow you to perform mutation in a controlled manner.
 
 Lets kickoff with a simple mobx-react-typescript application.
