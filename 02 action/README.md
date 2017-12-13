@@ -64,3 +64,26 @@ One of the cool features in the dev tools is the ability to log out all the stat
 
 ***Check the last box in the mobx dev tools and open chrome dev tools and clear it***
 * Now if we click the button you can see the action called along with the reaction that causes the hello component to re-render. 
+***Highlight the console to use action and reaction*** 
+
+***Close the dev tools and select the action***
+* A fundamental rule of good maintainable mobx is to always carry out mutations in action. 
+
+* By default, you can in carry out mutations from non `action` methods e.g. 
+
+```js
+<button onClick={() => this.data.clickedCount++}>
+```
+***Run the code***
+You can see that it still works as expected, 
+
+***Select the data class*** 
+but this makes the flow of changes in the state hard to follow as its spread across the data class and components that use it. 
+
+***Find references to clickedCount in the class***
+* This capability is nothing to be scared of for a TypeScript developer as if you notice a property changing, you can simply *find its references* 
+
+* And reliably refactor to action methods on the data class. 
+```js
+<button onClick={() => this.data.increment()}>
+```
