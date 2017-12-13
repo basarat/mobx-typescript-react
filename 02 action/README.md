@@ -44,3 +44,23 @@ Mobx provides excellent dev-tools that allow you to observe changes that happen 
 ```
 npm install mobx-react-devtools
 ```
+
+We simply import the component and render it along with the `app`. 
+
+```js
+import MobxReactDevtools from 'mobx-react-devtools'; // Top of file 
+
+// Bottom of file 
+ReactDOM.render(
+  <>
+  <Hello />
+  <MobxReactDevtools />
+  </>,
+  document.getElementById('root')
+);
+```
+
+One of the cool features in the dev tools is the ability to log out all the state changes and their impact. 
+
+***Check the last box in the mobx dev tools and open chrome dev tools and clear it***
+* Now if we click the button you can see the action called along with the reaction that causes the hello component to re-render. 

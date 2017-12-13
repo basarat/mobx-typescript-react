@@ -26,10 +26,10 @@ class Hello extends React.Component<{}> {
 }
 
 ReactDOM.render(
-  <div>
-    <Hello />
-    <MobxReactDevtools />
-  </div>,
+  <>
+  <Hello />
+  <MobxReactDevtools />
+  </>,
   document.getElementById('root')
 );
 
