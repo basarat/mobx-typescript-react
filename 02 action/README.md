@@ -64,7 +64,8 @@ One of the cool features in the dev tools is the ability to log out all the stat
 
 ***Check the last box in the mobx dev tools and open chrome dev tools and clear it***
 * Now if we click the button you can see the action called along with the reaction that causes the hello component to re-render. 
-***Highlight the console to use action and reaction*** 
+***Expand *action* in the console*** 
+* Mobx is nice enough to group all the changes that happen in an action like the change to `clickedCount` under it in the console.
 
 ***Close the dev tools and select the action***
 * A fundamental rule of good maintainable mobx is to always carry out mutations in action. 
