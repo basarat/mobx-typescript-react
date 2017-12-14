@@ -38,4 +38,4 @@ ReactDOM.render(
 
 ```
 
-TODO: Move the message into a computed property. 
+TODO: Computed hasBeenClicked. 
