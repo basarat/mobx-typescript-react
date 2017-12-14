@@ -38,4 +38,5 @@ ReactDOM.render(
 
 ```
 
+* Another export from `mobx` worth mentioning is the `computed` decortor.
 TODO: Computed hasBeenClicked. 
