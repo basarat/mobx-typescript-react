@@ -1,4 +1,4 @@
-# Computed properties
+# MobX @computed properties
 > MobX provides a neat little `@computed` decorator to exploit the *I know when you change* nature of observables for performance, fun and profit. 
 
 > In this lesson we look at an example use case for `@computed` properties.
