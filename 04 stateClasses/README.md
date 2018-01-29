@@ -9,4 +9,4 @@ Lets kickoff with a simple mobx-react-typescript application.
 * It is also a good idea to have a `reset` action available that resets the application to a known initial state.
 
 ***Select the appliation state class***
-You can make your applicaiton complex with ideas like `Provider` / `Connect` and even third party libraries that add more concepts and boiler plate, but this application class state pattern is simple to understand, which I would argue makes it fundamentally easier to maintain and describe to new developers in the long run. 
+You can make your application complex with ideas like `Provider` / `Connect` and even third party libraries that add more concepts and boiler plate, but this application class state pattern is simple to understand, which I would argue makes it fundamentally easier to maintain and describe to new developers in the long run. 

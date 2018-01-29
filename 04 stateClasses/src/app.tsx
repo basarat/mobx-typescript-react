@@ -4,7 +4,23 @@ import { observable, action, computed } from 'mobx';
 import { observer } from 'mobx-react';
 
 class ApplicationState {
+  @observable
+  currentValue = '';
 
+  @observable
+  values = [];
+
+  @action 
+  addCurrentValue() {
+    this.values.push(this.currentValue);
+    this.currentValue = '';
+  }
+
+  @action 
+  reset() {
+    this.currentValue = ''
+    this.values = [];
+  }
 }
 const state = new ApplicationState();
 
