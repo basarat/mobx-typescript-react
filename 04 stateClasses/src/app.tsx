@@ -18,7 +18,7 @@ class ApplicationState {
 
   @action 
   reset() {
-    this.currentValue = ''
+    this.currentValue = '';
     this.values = [];
   }
 }
