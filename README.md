@@ -14,7 +14,7 @@ Docs / Code to an accompanying video course on mobx-typescript-react.
 
 * [Using mobx to isolate react component state](https://egghead.io/lessons/react-using-mobx-to-isolate-a-react-component-state)
 
-* MobX Transactions and @action - MobX gives you amazing `PureComponent` performance nearly for free. In this lesson we take a deeper look at `@actions`.
+* [MobX dev tools and the action annotation](https://egghead.io/lessons/egghead-mobx-dev-tools-and-action).
 
 * MobX @computed properties - MobX provides a neat little `@computed` decorator to exploit the *I know when you change* nature of observables for performance, fun and profit. In this lesson we look at an example use case for `@computed` properties.
 

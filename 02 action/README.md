@@ -114,4 +114,4 @@ render() {
 ```
 * If we don't do any change in any observable, there is no reaction and therefore no need to render. 
 
-* Also worth mentioning, if the observable we change is not one that is actually read by an observer, there is once more, no need to re-render. 
+> This way mobx provides PureComponent performance without the need to use complicated JavaScript patterns or immutable data structure libraries.
