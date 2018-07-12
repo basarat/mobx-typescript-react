@@ -40,17 +40,15 @@ ReactDOM.render(
 ***Demo react click the button a few times***
 * As we click the button, the click count is incremented and the ui updates accordingly.
 
-Mobx provides excellent dev-tools that allow you to observe changes that happen in actions. We can install them simply with npm install.
+
 ```
 npm install mobx-react-devtools
 ```
+Mobx provides excellent dev-tools that allow you to observe changes that happen in actions. We can install them simply with npm install.
 
-We simply import the component and render it along with the `app`. 
 
 ```js
-import MobxReactDevtools from 'mobx-react-devtools'; // Top of file 
-
-// Bottom of file 
+import MobxReactDevtools from 'mobx-react-devtools';
 ReactDOM.render(
   <>
   <Hello />
@@ -59,8 +57,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+We simply import the component and render it along with the `app`. 
 
-One of the cool features in the dev tools is the ability to log out all the state changes and their impact. 
+> One of the cool features in the dev tools is the ability to log out all the state changes and their impact. 
 
 ***Check the last box in the mobx dev tools and open chrome dev tools and clear it***
 * Now if we click the button you can see the action called along with the reaction that causes the hello component to re-render. 
@@ -88,3 +87,13 @@ but this makes the flow of changes in the state hard to follow as its spread acr
 ```js
 <button onClick={() => this.data.increment()}>
 ```
+
+
+```js
+import { configure } from 'mobx';
+configure({
+  enforceActions: true
+});
+
+```
+* Note that there is a mobx option to enforce mutations to only take place in actions. But this is not something we've had to do as a basic level of don't mutate class members outside of class methods is an easy enough guidance.
