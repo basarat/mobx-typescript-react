@@ -29,12 +29,10 @@ class Hello extends React.Component<{}> {
 }
 
 import MobxReactDevtools from 'mobx-react-devtools';
-
 ReactDOM.render(
   <>
   <Hello />
-  <MobxReactDevtools />
+  <MobxReactDevtools/>
   </>,
   document.getElementById('root')
 );
-

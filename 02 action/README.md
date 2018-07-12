@@ -1,5 +1,5 @@
 # MobX dev tools and @action
-> MobX gives you amazing `PureComponent` performance nearly for free. In this lesson we take a deeper look at `@actions` how they allow you to perform mutation in a controlled manner.
+> In this lesson we take a deeper look at `@actions` how they allow you to perform mutation in a controlled manner. We also see how MobX gives you application wide amazing `PureComponent` performance nearly for free without having to use complicated JavaScript patterns or immutable data libraries.
 
 Lets kickoff with a simple mobx-react-typescript application.
 * We have a simple `Hello` component that maintains a local `clickedCount` state
@@ -44,7 +44,7 @@ ReactDOM.render(
 ```
 npm install mobx-react-devtools
 ```
-Mobx provides excellent dev-tools that allow you to observe changes that happen in actions. We can install them simply with npm install.
+Mobx provides excellent react dev-tools that allow you to observe changes that happen in actions. We can install them simply with npm install.
 
 
 ```js
@@ -97,3 +97,21 @@ configure({
 
 ```
 * Note that there is a mobx option to enforce mutations to only take place in actions. But this is not something we've had to do as a basic level of don't mutate class members outside of class methods is an easy enough guidance.
+
+
+> One more thing to note is that MobX only re-render any components that actually need to re-render due to some observable change. 
+```ts
+render() {
+  console.log('rendering');
+}
+```
+* If we log out whenever we render the component 
+* you can see that it render on first application load
+* And then whenever an observable change occurs in an action. (show the rendering as a part of the reaction in the console).
+
+```ts
+// this.clickedCount++;
+```
+* If we don't do any change in any observable, there is no reaction and therefore no need to render. 
+
+* Also worth mentioning, if the observable we change is not one that is actually read by an observer, there is once more, no need to re-render. 
