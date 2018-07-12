@@ -3,6 +3,7 @@
 .vscode/
 **/node_modules/**
 package-lock.json
+yarn.lock
 
 # Compiled output folders 
 lib

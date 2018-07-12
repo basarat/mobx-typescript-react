@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { observable, action } from 'mobx';
 import { observer } from 'mobx-react';
-import MobxReactDevtools from 'mobx-react-devtools';
 
 class HelloData {
   @observable clickedCount = 0;
@@ -24,6 +23,8 @@ class Hello extends React.Component<{}> {
     );
   }
 }
+
+import MobxReactDevtools from 'mobx-react-devtools'; // Top of file 
 
 ReactDOM.render(
   <>

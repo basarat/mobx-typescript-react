@@ -5,7 +5,7 @@ Docs / Code to an accompanying video course on mobx-typescript-react.
 ## Setup 
 
 * `cd` into lesson folder.
-* `npm install`.
+* `yarn install`.
 
 ## Course 
 * https://egghead.io/courses/develop-react-applications-with-mobx-and-typescript
