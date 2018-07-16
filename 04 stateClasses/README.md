@@ -67,7 +67,6 @@ import { observer } from 'mobx-react';
 
 * To use the state class, you simply bring in the singleton and use it.
 
-
 ***`appState.ts` Select the appliation state class***
 * This simple application class state pattern is simple to understand and is fundamentally easier to maintain and describe to new developers and maintain for experienced developers in the long run.
 * If you have complex business logic you can test it without wiring it up to react.
