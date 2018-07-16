@@ -1,5 +1,4 @@
 module.exports = {
-  devtool: 'inline-source-map',
   entry: './src/app.tsx',
   output: {
     path: __dirname + '/public',
