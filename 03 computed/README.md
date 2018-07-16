@@ -3,8 +3,6 @@
 
 > In this lesson we look at an example use case for `@computed` properties.
 
-Lets kickoff with a simple mobx-react-typescript application.
-* We have a simple `Hello` component that maintains a local `clickedCount` state
 
 ```js
 import * as React from 'react';
@@ -39,8 +37,18 @@ ReactDOM.render(
 );
 
 ```
+We kickoff with a simple mobx-react-typescript application.
+***Select HelloData***
+* We have `HelloData` that contains a simple observable and an action.
+***Select Hello***
+* We have a simple `Hello` observer component that uses this data in the render method.
+***Select `reactDom.render`***
+* We render this component to the application root.
 
-* Lets say we want to show additional UI based on wheather the button has been clicked or not. 
+***click the button***
+* When we click the button, an increment of the mobx observable causes the Hello component to re-render with the new count.
+
+* Lets say we want to show additional UI based on whether the button has been clicked at least once or not. 
 * We can do it easily with a simple condition check and showing a div if the condition is met
 
 ```js
@@ -56,35 +64,40 @@ ReactDOM.render(
       </>
     );
 ```
-***run the demo***
+***click the button in the demo***
 * Now when we click the button we get this new div showing up.
 
 ***Select the `this.data.clickedCount > 0`***
-* Since this condition can be derived from the `clickedCount` and worth understanding in isolation, we can move it into a nice getter in the data class.
 
 ```js
   get hasBeenClicked() {
     return this.clickedCount > 0;
-  }
-  
+  }  
 ```
-* And now we get to use it in our render function
+* Since this condition can be derived from the `clickedCount` and is worthy of a semantic name, we can move it into a nice getter in the data class.
+
+
 ```js
         this.data.hasBeenClicked
         && <div>You have clicked the button!</div>
 ```
+* And now we get to use it in our render function
 
-
-* For these simple getters that can be derived from observables, `mobx` provides the `computed` decortor which does additional optimizations like, not running the getter if the observed properties haven't changed.
+***Select the getter***
+* For these simple getters that can be derived from observables, 
 
 ```js
 import { observable, action, computed } from 'mobx';
 ```
-* We mark the property as computed 
+* `mobx` provides the `computed` decortor which does additional optimizations like, not running the getter if the observed properties haven't changed.
+
 ```js
   @computed
   get hasBeenClicked() {
     return this.clickedCount > 0;
   }
 ```
-And now mobx will only re-run this getter if the value for the clickedCount changes. Just another neat optimization you get by using mobx obserables.
+* We mark the property as computed 
+
+***Select the getter***
+And now mobx will only re-run this getter if the value for the clickedCount changes. Just another neat optimization you get for free by using mobx obserables.
