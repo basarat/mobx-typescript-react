@@ -16,7 +16,7 @@ Docs / Code to an accompanying video course on mobx-typescript-react.
 
 * [MobX dev tools and the action annotation](https://egghead.io/lessons/egghead-mobx-dev-tools-and-action).
 
-* MobX @computed properties - MobX provides a neat little `@computed` decorator to exploit the *I know when you change* nature of observables for performance, fun and profit. In this lesson we look at an example use case for `@computed` properties.
+* [MobX @computed values](https://egghead.io/lessons/react-mobx-computed-properties).
 
 * Maintainable application state using MobX- In this lesson we look at a maintainable `state classes` pattern for MobX-React applications. 
 

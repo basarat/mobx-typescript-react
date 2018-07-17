@@ -1,4 +1,4 @@
-# MobX @computed properties
+# MobX @computed values
 > MobX provides a neat little `@computed` decorator to exploit the *I know when you change* nature of observables for performance, fun and profit. 
 
 > In this lesson we look at an example use case for `@computed` getters and their performance advantages.
@@ -125,6 +125,6 @@ console.log('called');
 * And then access the getter twice from the render function 
 
 ***Have console open and click the button***
-* Now when we run the application you can see that the body of the getter only executes once even though its value is requested twice. This is because mobx knows that the observable used by the getter hasn't changed and therefore doesn't need to re-run the body to get the new result. 
+* When we run the application you can see that the body of the getter only executes once for each render even though its value is accessed twice. This is because mobx knows that the observable used by the getter hasn't changed and therefore doesn't need to re-run the body to get the new result. 
 
 > This is just another example of mobx taking advantage of the observables to give you the best performing UI application with minimal effort.
