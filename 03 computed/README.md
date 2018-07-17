@@ -51,8 +51,7 @@ We kickoff with a simple mobx-react-typescript application.
 ***click the button***
 * When we click the button, an increment of the mobx observable causes the Hello component to re-render with the new count.
 
-* Lets say we want to show additional UI based on whether the button has been clicked at least once or not. 
-* We can do it easily with a simple condition check and showing a div if the condition is met
+> Lets say we want to show additional UI based on whether the button has been clicked at least once or not. 
 
 ```js
   return (
@@ -67,6 +66,8 @@ We kickoff with a simple mobx-react-typescript application.
       </>
     );
 ```
+* We can do it easily with a simple condition check and showing a div if the condition is met
+
 ***click the button in the demo***
 * Now when we click the button we get this new div showing up.
 
@@ -84,7 +85,11 @@ We kickoff with a simple mobx-react-typescript application.
         this.data.hasBeenClicked
         && <div>You have clicked the button!</div>
 ```
-* And now we get to use it in our render function
+* And now we get to use it in our render function. 
+
+
+***Click the button***
+You can see that the application still functions as expected.
 
 ***Select the getter***
 * For these simple getters that can be derived from observables, 
@@ -92,7 +97,6 @@ We kickoff with a simple mobx-react-typescript application.
 ```js
 import { observable, action, computed } from 'mobx';
 ```
-* `mobx` provides the `computed` decortor which does additional optimizations like, not running the getter if the observed properties haven't changed.
 
 ```js
   @computed
@@ -100,7 +104,30 @@ import { observable, action, computed } from 'mobx';
     return this.clickedCount > 0;
   }
 ```
-* We mark the property as computed 
+* `mobx` provides the `computed` decortor which does not change the observed behaviour of the application.
 
 ***Select the getter***
-And now mobx will only re-run this getter if the value for the clickedCount changes. Just another neat optimization you get for free by using mobx obserables.
+However we get a neat optimization for free here. Mobx will only re-run this getter if the value for the clickedCount changes. If none of the observables have changed, the getter simply returns the last value.
+
+```ts
+console.log('called');
+```
+
+```ts
+        {
+          this.data.hasBeenClicked
+          && <div>You have clicked the button!</div>
+        }
+        {
+          this.data.hasBeenClicked
+          && <div>You have clicked the button!</div>
+        }
+```
+
+* Lets add a log to the getter
+* And then access the getter twice from the render function 
+
+***Have console open and click the button***
+* Now when we run the application you can see that the body of the getter only executes once even though its value is requested twice. This is because mobx knows that the observable used by the getter hasn't changed and therefore doesn't need to re-run the body to get the new result. 
+
+> This is just another example of mobx taking advantage of the observables to give you the best performing UI application with minimal effort.
