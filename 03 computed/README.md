@@ -24,9 +24,11 @@ class Hello extends React.Component<{}> {
   data = new HelloData();
   render() {
     return (
+      <>
       <button onClick={() => this.data.increment()}>
         Click count = {this.data.clickedCount}
       </button>
+      </>
     );
   }
 }

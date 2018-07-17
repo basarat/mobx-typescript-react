@@ -4,16 +4,12 @@ import { observable, action, computed } from 'mobx';
 import { observer } from 'mobx-react';
 
 class HelloData {
-  @observable clickedCount = 0;
+  @observable 
+  clickedCount = 0;
 
   @action
   increment() {
     this.clickedCount++;
-  }
-
-  @computed
-  get hasBeenClicked() {
-    return this.clickedCount > 0;
   }
 }
 
@@ -26,10 +22,6 @@ class Hello extends React.Component<{}> {
       <button onClick={() => this.data.increment()}>
         Click count = {this.data.clickedCount}
       </button>
-      {
-        this.data.hasBeenClicked
-        && <div>You have clicked the button!</div>
-      }
       </>
     );
   }
