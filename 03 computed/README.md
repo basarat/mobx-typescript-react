@@ -11,7 +11,8 @@ import { observable, action } from 'mobx';
 import { observer } from 'mobx-react';
 
 class HelloData {
-  @observable clickedCount = 0;
+  @observable 
+  clickedCount = 0;
 
   @action
   increment() {
