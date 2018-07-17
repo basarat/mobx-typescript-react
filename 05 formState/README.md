@@ -1,3 +1,10 @@
+# Creating reusable state class driven components 
+
+> The state class pattern can easily be expanded to allow you to create component-ui / component-state pairs that provide reuseable functionality for your applications. 
+
+> In this lesson we look at an example of creating a reuseable input component. 
+
+> We also mention a reuseable form state management library that uses the state class pattern. 
 
 ***Create `field.tsx`***
 * You can even refactor this to consolidate it into a class of its own e.g. lets create a `FieldState` class. 

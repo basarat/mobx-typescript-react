@@ -1,5 +1,5 @@
 # Maintainable application state class pattern using MobX
-> In this lesson we look at a maintainable `state classes` pattern for MobX-React applications. Modelling the real world is the core reason of existance for Classes and Mobx makes using these classes / their properties and their methods really easy for reactive (UI is just a reaction of the state) React applications.
+> In this lesson we look at a maintainable `state classes` pattern for MobX-React applications. Modelling the real world is the core reason of existence for Classes and Mobx makes using these classes / their properties and their methods really easy for reactive (UI is just a reaction of the state) React applications.
 
 We start off with a bare bones react-typescript application. We are simply rendering the text `Hello world` from our Application component.
 ```ts
