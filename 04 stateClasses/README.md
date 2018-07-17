@@ -1,7 +1,26 @@
 # Maintainable application state class pattern using MobX
 > In this lesson we look at a maintainable `state classes` pattern for MobX-React applications. Modelling the real world is the core reason of existance for Classes and Mobx makes using these classes / their properties and their methods really easy for reactive (UI is just a reaction of the state) React applications.
 
-We start off with a bare bones mobx-react-typescript application.
+We start off with a bare bones react-typescript application. We are simply rendering the text `Hello world` from our Application component.
+```ts
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+class Application extends React.Component {
+  render() {
+    return (
+      <div>
+        Hello world
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Application />,
+  document.getElementById('root')
+);
+```
 
 ```ts
 import { observable, action } from 'mobx';
@@ -10,8 +29,8 @@ import { observable, action } from 'mobx';
  * Features
  * - Store a list of items (strings) 
  * - Allow maintaining a *current* string as it gets typed
- * - Add new new string to this list 
- * - Add an option to reset the list
+ * - Ability to add this *current* string to the list of items
+ * - Add an option to reset the items and the *current* string
  */
 class ApplicationState {
   @observable
@@ -44,6 +63,7 @@ export const appState = new ApplicationState();
 
 ***Create a file appState.ts***
 * To maintain the state logic of our UI application we create an `appState.ts` file
+* We bring in the usual suspects from `mobx`. 
 * Our application requirement are to 
     - READ OUT THE ONES MENTIONED
 * We can easily model these data and method requirements as a class that 
@@ -59,7 +79,7 @@ export const appState = new ApplicationState();
 
 
 ***Select the app.tsx file***
-* Now lets create the UI for our application that allows use to add items to the list and reset the list.
+* Now lets create the UI for our application that uses features of this state class.
 
 ```ts
 import { observer } from 'mobx-react';
@@ -103,11 +123,19 @@ import { appState } from './appState';
 * A button to reset the appState 
 * Finally we render the items from the appState in to an unordered list.
 
+***Demo the application***
+You can see that the application behaves as expected and you can 
+* *add an item using the enter key* 
+* *add an item by using the add button* 
+* *and reset the list using the reset button* 
+
 ***Select the `app.tsx` App class***
-* Notice that to use the application state class pattern, we really didn't have to do anything special in order to create a UI that wires to the application state to the dom beyond a simple `@observer` annotation.
+* Notice that to use the application state class pattern, we really didn't have to do anything special in order to create a UI beyond a simple `@observer` annotation.
+* Additional we get a nice refactorable type safe experience as we know all the ways the `appState` is used from our UI.
 
 ***`appState.ts` Select the appliation state class***
 * This simple application state class pattern is simple to understand and is fundamentally easier to maintain and describe to new developers and maintain for experienced developers in the long run.
 
-> Also if you have complex business logic in this class you can test it without wiring it up to react.
+***Select the export**
+Also if you have complex business logic in this class you can test it without having to wire it up to react.
 

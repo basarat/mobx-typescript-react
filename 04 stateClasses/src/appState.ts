@@ -4,8 +4,8 @@ import { observable, action } from 'mobx';
  * Features
  * - Store a list of items (strings) 
  * - Allow maintaining a *current* string as it gets typed
- * - Add new new string to this list 
- * - Add an option to reset the list
+ * - Ability to add this *current* string to the list of items
+ * - Add an option to reset the items and the *current* string
  */
 class ApplicationState {
   @observable
