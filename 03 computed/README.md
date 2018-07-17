@@ -74,19 +74,16 @@ We kickoff with a simple mobx-react-typescript application.
 ***Select the `this.data.clickedCount > 0`***
 
 ```js
+        this.data.hasBeenClicked
+        && <div>You have clicked the button!</div>
+```
+
+```js
   get hasBeenClicked() {
     return this.clickedCount > 0;
   }  
 ```
-* Since this condition can be derived from the `clickedCount` and is worthy of a semantic name, we can move it into a nice getter in the data class.
-
-
-```js
-        this.data.hasBeenClicked
-        && <div>You have clicked the button!</div>
-```
-* And now we get to use it in our render function. 
-
+* Since this condition is derived from the `clickedCount` member of the data class,we can move it into a nice getter with a semantic name in the data class that will help future maintainers of that class understand the data flow a bit better.
 
 ***Click the button***
 You can see that the application still functions as expected.
@@ -107,7 +104,7 @@ import { observable, action, computed } from 'mobx';
 * `mobx` provides the `computed` decortor which does not change the observed behaviour of the application.
 
 ***Select the getter***
-However we get a neat optimization for free here. Mobx will only re-run this getter if the value for the clickedCount changes. If none of the observables have changed, the getter simply returns the last value.
+However we get a neat optimization for free here. Mobx will only re-run this getter if the value for the clickedCount changes. If none of the observables in a computed have changed, the getter simply returns the last value without running its body.
 
 ```ts
 console.log('called');
@@ -124,7 +121,7 @@ console.log('called');
         }
 ```
 
-* Lets add a log to the getter
+* To demonstrate this, lets add a log to the getter
 * And then access the getter twice from the render function 
 
 ***Have console open and click the button***
