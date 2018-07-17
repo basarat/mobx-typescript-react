@@ -1,3 +1,22 @@
-* You can even refactor this to consolidate it into a class of its own e.g. lets create a `Field` class. 
-* And we can refactor the rendering of this component into a reuseable piece as well e.g. lets create a `InputField` class. 
 
+***Create `field.tsx`***
+* You can even refactor this to consolidate it into a class of its own e.g. lets create a `FieldState` class. 
+* And we can refactor the rendering of this component into a reuseable piece as well e.g. lets create a `FieldInput` class. 
+
+
+> Next steps can include adding validation and error maintainance along with the ability to compose field states into a nice cohesive form state. This is exactly what a library `FormState` does. 
+
+```
+npm install formstate
+```
+* We bring it in from `npm`
+
+```
+```
+***field.tsx***
+* And then use it instead of creating our own `FieldState` class. 
+* We just refactor the input to use this `FieldState`. 
+
+
+***Select the `FieldInput`***
+* Note that having the ability to author our own `FieldInput` allows us to design an input that matches our design requirements without having to worry about the core logic of field state management and validation.
