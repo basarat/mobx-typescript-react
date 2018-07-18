@@ -2,7 +2,7 @@
 
 >  MobX is independent of React and really you can use whatever testing framework you want with it. Testing MobX is essentially as easy as testing simple JavaScript functions. This lesson demonstrates an example with Jest.
 
-***start off with the items list application***
+***start off with the items list application 04stateClasses***
 Here we have a simple application state class from a previous lesson. 
 
 ***show jest.config.js***

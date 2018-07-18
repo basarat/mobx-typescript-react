@@ -16,13 +16,14 @@ npm start
 
 
 ***Select the `input` in app.tsx***
-***Select the currentItem and onChange in appState.tsx***
 * Looking at the app it would be great if we could create a reusable `input` field component. 
+***Select the currentItem and onChange in appState.tsx***
 * Similarly looking at the `appState` it would be great if we could create a reusable field state. 
 
 ***Create `field.tsx`***
-* You can even refactor this to consolidate it into a class of its own e.g. lets create a `FieldState` class. 
-* And we can refactor the rendering of this component into a reuseable piece as well e.g. lets create a `FieldInput` class. 
+* Let's refactor the application to create these reusable pieces of logic.
+* We can refactor the `value` property and `onChange` action into a nice reuseable class called `FieldState`. 
+* Similarly we can refactor the rendering of such a fieldState to an input as a reuseable `FieldInput` class that takes a `FieldState` as its prop.
 
 
 > Next steps can include adding validation and error maintainance along with the ability to compose field states into a nice cohesive form state. This is exactly what a library `FormState` does. 
