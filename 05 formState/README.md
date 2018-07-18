@@ -6,6 +6,17 @@
 
 > We also mention a reuseable form state management library that uses the state class pattern. 
 
+```bash
+npm start 
+# have `app.tsx` open
+# add an item 
+# press reset 
+```
+* We start off with the base list application from the previous lesson. You can add items to a list and reset it if you want. 
+
+
+
+
 ***Create `field.tsx`***
 * You can even refactor this to consolidate it into a class of its own e.g. lets create a `FieldState` class. 
 * And we can refactor the rendering of this component into a reuseable piece as well e.g. lets create a `FieldInput` class. 
