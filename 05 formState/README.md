@@ -15,7 +15,10 @@ npm start
 * We start off with the base list application from the previous lesson. You can add items to a list and reset it if you want. 
 
 
-
+***Select the `input` in app.tsx***
+***Select the currentItem and onChange in appState.tsx***
+* Looking at the app it would be great if we could create a reusable `input` field component. 
+* Similarly looking at the `appState` it would be great if we could create a reusable field state. 
 
 ***Create `field.tsx`***
 * You can even refactor this to consolidate it into a class of its own e.g. lets create a `FieldState` class. 

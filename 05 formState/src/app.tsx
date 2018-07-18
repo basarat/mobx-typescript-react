@@ -18,7 +18,8 @@ class Application extends React.Component {
           <button type="submit">
             Add
           </button>
-          <button type="button" onClick={() => appState.reset()}>
+          <button type="button"
+            onClick={() => appState.reset()}>
             Reset
           </button>
           <ul>
