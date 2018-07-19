@@ -20,7 +20,7 @@ Docs / Code to an accompanying video course on mobx-typescript-react.
 
 * [Application state class pattern using MobX](https://egghead.io/lessons/react-maintainable-application-state-class-pattern-using-mobx). 
 
-* Forms and Fields using FormState - Creating reusable input fields is super easy with MobX. In this lesson we look at a bespoke solution along with an OSS library called formstate that offers more features for handling forms and field states using MobX.
+* [Creating reuseable state class driven components](TODO).
 
 * Test MobX models with Jest - MobX is independent of React and really you can use whatever testing framework you want with it. Testing MobX is essentially as easy as testing simple JavaScript functions. This lesson demonstrates an example with Jest.
  
