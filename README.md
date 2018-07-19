@@ -18,7 +18,7 @@ Docs / Code to an accompanying video course on mobx-typescript-react.
 
 * [MobX @computed values](https://egghead.io/lessons/react-mobx-computed-properties).
 
-* Maintainable application state using MobX- In this lesson we look at a maintainable `state classes` pattern for MobX-React applications. 
+* [Application state class pattern using MobX](https://egghead.io/lessons/react-maintainable-application-state-class-pattern-using-mobx). 
 
 * Forms and Fields using FormState - Creating reusable input fields is super easy with MobX. In this lesson we look at a bespoke solution along with an OSS library called formstate that offers more features for handling forms and field states using MobX.
 
