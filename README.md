@@ -12,6 +12,8 @@ Docs / Code to an accompanying video course on mobx-typescript-react.
 
 ## Lessons
 
+* [Introducing React application with MobX and TypeScript](TODO)
+
 * [Using mobx to isolate react component state](https://egghead.io/lessons/react-using-mobx-to-isolate-a-react-component-state)
 
 * [MobX dev tools and the action annotation](https://egghead.io/lessons/egghead-mobx-dev-tools-and-action).
