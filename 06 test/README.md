@@ -1,25 +1,27 @@
-# Testing Mobx Applications
+# Testing MobX Applications
 
->  MobX is independent of React and really you can use whatever testing framework you want with it. Testing MobX is essentially as easy as testing simple JavaScript functions. This lesson demonstrates an example with Jest.
+> MobX is independent of React and really you can use whatever testing framework you want with it. Testing MobX is essentially as easy as testing simple JavaScript. 
+
+> This lesson demonstrates an example of testing mobx application state with Jest.
 
 ***npm start***
 ***app.tsx***
 ***Add a foo and a bar and reset***
-Here we have a simple application state class from a previous lesson. 
+Here we have a simple list application from a previous lesson. It allows us to add items and reset the items if required.
 
 ***appState.ts***
 The behaviour of this application is described by the application state class. 
 
 ***Select the appState singleton***
 So in order to test the application behaviour we can go a long way by simply testing that the `appState` behaves as expected. 
-
+> Since all we need to do is test simple JavaScript we can use any testing framework like mocha, jasmine or jest with mobx. Lets go with `jest` is that is the most common one used by React developers.
 
 ***show package.json***
-> We already have jest setup using the standard TypeScript jest process that is covered in a seperate TypeScript React lesson.
-* It simply involves the installation of type types for `jest`, `jest` itself and `ts-jest`. 
-* And a script target to run jest.
+> We already have jest setup using the standard TypeScript jest process.
+* We have script target to run jest.
+* Installation was a simple npm install of `@types/jest`, `jest` itself and `ts-jest`. 
 ***show jest.config.js***
-* We configure jest with a simple copy paste of the `jest.config.js` from the TypeScript React course.
+* We've configured jest with a simple copy paste of the `jest.config.js` from my TypeScript React course.
 
 
 ***appState.ts select the features***
@@ -80,3 +82,10 @@ npm t
 
 ***Select the whole test file***
 You can see that the fact that mobx is transparent reactive you get to write simple JavaScript tests for your state behaviour without having to go through complex apis and patterns.
+
+```
+npm t -- --coverage 
+```
+* A neat feature of jest is built in coverage support. 
+* You can see that our tests cover 100% of the application state behaviour.
+

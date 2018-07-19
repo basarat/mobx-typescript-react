@@ -22,5 +22,5 @@ Docs / Code to an accompanying video course on mobx-typescript-react.
 
 * [Creating reuseable state class driven components](https://egghead.io/lessons/react-creating-reusable-state-class-driven-components).
 
-* Test MobX models with Jest - MobX is independent of React and really you can use whatever testing framework you want with it. Testing MobX is essentially as easy as testing simple JavaScript functions. This lesson demonstrates an example with Jest.
+* [Testing MobX Applications](https://egghead.io/lessons/react-testing-mobx-applications).
  
