@@ -14,11 +14,14 @@ The behaviour of this application is described by the application state class.
 So in order to test the application behaviour we can go a long way by simply testing that the `appState` behaves as expected. 
 
 
+***show package.json***
+> We already have jest setup using the standard TypeScript jest process that is covered in a seperate TypeScript React lesson.
+* It simply involves the installation of type types for `jest`, `jest` itself and `ts-jest`. 
 ***show jest.config.js***
-We already have jest setup using the standard TypeScript jest process that is covered in a seperate TypeScript React lesson. 
+* We configure jest with a simple copy paste of the `jest.config.js` from the TypeScript React course.
 
 ***create `appState.test.ts`***
-Lets add a test for this `appState`
+Lets add a test for this `appState`.
 
 ***Select the whole test file***
-You can see that the fact that mobx is transparent reactive you get to write simple JavaScript classes for your state and test it without having to go through complex apis and patterns.
+You can see that the fact that mobx is transparent reactive you get to write simple JavaScript tests for your state behaviour without having to go through complex apis and patterns.
