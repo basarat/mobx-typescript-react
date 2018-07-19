@@ -12,7 +12,7 @@ Docs / Code to an accompanying video course on mobx-typescript-react.
 
 ## Lessons
 
-* [Introducing React application with MobX and TypeScript](TODO)
+* [React with Mobx and TypeScript course introduction](https://egghead.io/lessons/react-react-with-mobx-and-typescript-course-introduction)
 
 * [Using mobx to isolate react component state](https://egghead.io/lessons/react-using-mobx-to-isolate-a-react-component-state)
 
