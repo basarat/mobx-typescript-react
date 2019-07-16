@@ -1,0 +1,13 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "01 init/package.json",
+        "02 action/package.json",
+        "03 computed/package.json",
+        "04 stateClasses/package.json",
+        "05 formState/package.json"
+      ]
+    }
+  }
+}
