@@ -1,5 +1,7 @@
 # Develop React Applications with Mobx and TypeScript
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/basarat/mobx-typescript-react.svg)](https://greenkeeper.io/)
+
 Docs / Code to an accompanying video course on mobx-typescript-react.
 
 ## Setup 
